@@ -1,0 +1,380 @@
+@import url("recommendReset.css");
+
+:root {
+  --background-color: #5b2386;
+  --text-color: #333333;
+  --accent-color: #0066cc;
+  --bacground-button: #fcee21;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: GmarketSansMedium, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  line-height: 100%;
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin: auto 0;
+  padding: 36px 0;
+  background-color: var(--background-color);
+}
+.buttonstyle {
+  background-color: var(--bacground-button);
+  color: var(--background-color);
+  font-family: Gmarket Sans;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 150%;
+}
+
+/* header section */
+header{
+  margin-bottom: 70px;
+}
+.header-img {
+  width: 297px;
+  margin: auto;
+}
+.header-img img {
+  aspect-ratio: 278 / 130;
+  opacity: 1;
+  background-image: url("../asset/일만시간/Frame 12.png");
+  background-repeat: no-repeat;
+  object-fit: contain;
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 32px;
+}
+.header-img p {
+  font-family: OTEnjoystoriesBA;
+  font-weight: 400;
+  font-size: 2.2rem;
+  color: #f5df4d;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* section section */
+
+.description-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.description-section::before {
+  content: "";
+  background-image: url("../asset/위따옴표.png");
+  background-repeat: no-repeat;
+  background-position: center;  
+  background-size: contain;    
+  width: 20px;
+}
+.description-section::after {
+  content: "";
+  background-image: url("../asset/아래따옴표.png");
+  background-repeat: no-repeat;
+  background-position: center;  
+  background-size: contain;    
+  width: 20px;
+}
+.description-section strong {
+  font-family: Gmarket Sans;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 160%;
+  text-align: center;
+}
+.description-section blockquote {
+  font-family: Gmarket Sans;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 160%;
+  text-align: center;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.input-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px 0;
+
+}
+.input-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.input-area span {
+  font-family: Gmarket Sans;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.input-area input {
+  width: 156px;
+  gap: 10px;
+  border-radius: 0.8rem;
+  padding: 12px 30px;
+  text-align: center;
+}
+.input-section span {
+  font-family: Gmarket Sans;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+@media (min-width: 768px) {
+  .input-section form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .input-section form .input-area:first-of-type {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .input-section form .needwrap {
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+/* resultclick-section */
+.resultclick-section {
+
+  width: fit-content;
+  position: relative;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+.resultclick-btn {
+  min-width: 240px;
+  max-width: 566px;
+  border-radius: 12px;
+  padding: 20px 50px;
+  text-align: center;
+}
+.resultclick-section::after {
+  content: "";
+  background-image: url("../asset/일만시간/icon.png");
+  width: 42px;
+  height: 42px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right:-20px;
+  bottom: 0px;
+}
+.inputresult-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+.inputresult-section div span {
+  font-family: Gmarket Sans;
+  font-weight: 400;
+  line-height: 100%;
+  vertical-align: middle;
+  vertical-align: middle;
+}
+#result1,
+#result2 {
+  font-family: Gmarket Sans;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 100%;
+  vertical-align: middle;
+}
+/* gogosection */
+.gogo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  width: 100%;
+  gap: 0 8px;
+}
+.gogobutton {
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 203px;
+  max-width: 365px;
+  width: 40%;
+  font-family: Gmarket Sans;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+.sharebutton {
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 195px;
+  min-width: 110px;
+  width: 20%;
+  background-color: #ffffff;
+  color: var(--background-color);
+  font-family: Gmarket Sans;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 30px 20px;
+  gap: 20px;
+}
+
+.foot-text {
+  font-family: Noto Sans KR;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* dialog 속성 */
+dialog {
+  border: none;
+  margin: auto; /* 화면 중앙 정렬 */
+  width: 330px;
+  border-radius: 20px;
+  padding: 41px 40px;
+  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+}
+
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; 
+  text-align: center;
+}
+
+.dialog-container p {
+  font-family: Gmarket Sans ;
+  color: var(--background-color);
+  margin: 0;
+}
+ 
+.dialog-container p:first-of-type {
+  font-weight: 700;
+  font-size: 2.4rem; 
+  margin-bottom: 10px;
+}
+ 
+.dialog-container p:last-of-type {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+ 
+.dialog-container img {
+  max-width: 100%;
+  margin: 20px 0; 
+}
+
+
+.realpractice-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px 20px;
+  background-color: var(--bacground-button);
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.realpractice-button span {
+  color: var(--background-color);
+  font-family: Gmarket Sans;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  dialog {
+    /* [요청하신 데스크탑 스펙 적용] */
+    width: 800px;
+    /* height: 800px; */ /* 필요시 주석 해제 */
+    padding: 80px 146px;
+  }
+
+  /* 글자 크기 키우기 */
+  .dialog-container p:first-of-type {
+    font-size: 4.8rem; /* 타이틀 대폭 확대 */
+    margin-bottom: 20px;
+  }
+
+  .dialog-container p:last-of-type {
+    font-size: 2.4rem;
+  }
+
+  /* 버튼 글자 크기 키우기 */
+  .realpractice-button {
+    padding: 20px 40px;
+    border-radius: 20px; /* 더 둥글게 */
+  }
+  
+  .realpractice-button span {
+    font-size: 1.8rem;
+  }
+  
+  /* 라이캣 이미지 크기 제한 (너무 커지지 않게) */
+  .dialog-container img {
+    max-width: 60%; 
+  }
+}

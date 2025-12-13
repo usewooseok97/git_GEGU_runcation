@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta
+      name="description"
+      content="1만시간의 법칙의 설명과 매일 하면 얼마나걸릴지에 대해 알려주는 사이트"
+    >
+    <meta property="og:title" content="1만 시간의 법칙" >
+    <meta
+      property="og:description"
+      content="1만시간의 법칙의 설명과 매일 하면 얼마나걸릴지에 대해 알려주는 사이트"
+    >
+    <meta property="og:image" content="" >
+    <meta name="editor" >
+    <title>1만 시간의 법칙</title>
+    <link rel="stylesheet" href="css/일만시간.css" >
+  </head>
+  <body>
+    <header>
+      <div class="header-img">
+        <h1 class="sr-only">1만시간의 법칙</h1>
+        <img src="asset/일만시간/Frame.png" alt="1만 시간의 법칙 " >
+        <p>“연습은 어제의 당신보다 당신을 더 낫게 만든다.”</p>
+      </div>
+    </header>
+    <main>
+      <div class="description-section">
+        <blockquote>
+          <p><strong>1만 시간의 법칙</strong>은<br>
+          어떤 분야의 전문가가 되기 위해서는<br>
+          최소한 1만 시간의 훈련이 필요하다는 법칙이다.</p>
+        </blockquote>
+      </div>
+      <section class="input-section ">
+        <h2 class="sr-only">1만시간의 법칙 입력칸</h2>
+        <form action="" method="get">
+          <div class="input-area">
+            <span>나는</span>
+              <label class="sr-only" for="type">입력칸</label
+              ><input
+                type="text"
+                name="type"
+                id="type"
+                placeholder="예&#41; 프로그래밍"
+              >
+            <span>전문가가 될 것이다.</span>
+          </div>
+          <span class="needwrap">그래서 앞으로 매일 하루에</span>
+          <div  class="input-area">
+              <label class="sr-only" for="time">입력칸</label
+              ><input
+                type="number"
+                name="time"
+                id="time"
+                placeholder="예&#41; 5시간"
+              >
+            <span>시간 씩 훈련할 것이다.</span>
+          </div>
+        </form>
+      </section>
+      <div class="resultclick-section">
+        <button class="resultclick-btn buttonstyle">
+          나는 며칠 동안 훈련을 해야 1만 시간이 될까?
+        </button>
+      </div>
+      <section class="inputresult-section">
+        <h2 class="sr-only">1만시간의 법칙 결과칸</h2>
+        <div>
+          <span>당신은 </span>
+          <strong id="result1"> 프로그래밍 </strong>
+          <span> 전문가가 되기 위해서</span>
+        </div>
+        <div>
+          <span>대략 </span>
+          <strong id="result2"> 5110 </strong>
+          <span> 일 이상 훈련하셔야 합니다! :&#41;</span>
+        </div>
+      </section>
+      <section class="gogo-section">
+        <button class="gogobutton buttonstyle">훈련하러 가기 GO! GO!</button>
+        <button  class="sharebutton">공유하기</button>
+      </section>
+    </main>
+    <dialog>
+      <div class="dialog-container">
+        <h3 class="sr-only">훈련페이지로 넘어가기전 응원메시지가 담긴 모달창</h3>
+        <p>화이팅!!</p>
+        <p>당신의 꿈을 응원합니다.</p>
+        <img src="asset/일만시간/라이캣-img.png" alt="위니브 라이캣">
+        <form method="dialog">
+          <a class="realpractice-button" href="#">
+            <span>종료하고 진짜 훈련하러 가기 GOGO!!</span>
+          </a>
+        </form>
+      </div>
+    </dialog>
+    <footer>
+      <a href="https://weniv.co.kr/"
+        ><img src="../asset/일만시간/wenivlogo.png" alt="weniv"
+      ></a>
+      <span class="foot-text"
+        >본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 위니브에
+        있습니다.수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수
+        있습니다.</span
+      >
+    </footer>
+  </body>
+  <script>
+    // 1. 필요한 요소들을 선택합니다.
+const openButton = document.querySelector('.gogobutton'); // 모달을 여는 버튼 (결과 확인 버튼)
+const modal = document.querySelector('dialog');                // 모달창 요소
+const closeButton = document.querySelector('.realpractice-button'); // 모달을 닫는 버튼 (종료하고 가기)
+
+// 2. [열기] 버튼을 클릭했을 때의 동작
+openButton.addEventListener('click', (event) => {
+  // 폼 안에 있는 버튼이라면 페이지 새로고침을 막아야 합니다.
+  event.preventDefault(); 
+  
+  // 모달을 엽니다. (showModal을 써야 backdrop인 어두운 배경이 생깁니다)
+  modal.showModal();
+});
+
+// 3. [닫기/이동] 버튼을 클릭했을 때의 동작
+closeButton.addEventListener('click', () => {
+  // 모달을 닫습니다.
+  modal.close();
+  
+  // 만약 닫으면서 진짜 페이지를 이동시켜야 한다면 아래 주석을 풀고 링크를 넣으세요.
+  // window.location.href = "이동할_주소_입력";
+});
+
+// 4. (선택사항) 모달 바깥 배경을 눌렀을 때 닫히게 하려면 추가
+modal.addEventListener('click', (event) => {
+  // 클릭한 대상이 모달 컨텐츠가 아니라 모달(배경) 자체라면 닫기
+  if (event.target === modal) {
+    modal.close();
+  }
+});
+  </script>
+</html>
